@@ -35,7 +35,11 @@ html {
 
 /* Reflection animation */
 
-.content {
+.content2 {
+    margin-top: 18px;
+}
+.content,
+.content2 {
     position: relative;
 }
 
@@ -69,6 +73,23 @@ html {
 }
 
 .content h3:nth-child(2) {
+    color: #53b0ee;
+    animation: animate 2s ease-in-out infinite;
+}
+
+.content2 h3 {
+    color: #fff;
+    font-size: 1.5em;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.content2 h3:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 1px #065f9a;
+}
+
+.content2 h3:nth-child(2) {
     color: #53b0ee;
     animation: animate 2s ease-in-out infinite;
 }

@@ -10,7 +10,7 @@ const Footer = (props: Props) => {
     return (
         <div className="max-w-[1420px] mx-auto flex justify-center items-center dark:bg-zinc-800 mt-12">
             <footer className="p-2 w-full bg-white sm:p-6 dark:bg-zinc-800">
-                <div className="md:flex md:justify-between justify-betwen">
+                <div className="flex flex-row justify-between items-center">
                     {/* <div className="mb-2 md:mb-0">
                         <Link href="/" className="flex items-center">
                             <img
@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
                             </span>
                         </Link>
                     </div> */}
-                    <div className="text-xl font-semibold whitespace-nowrap dark:text-white content pb-[-12px]">
+                    <div className="text-xl font-semibold whitespace-nowrap dark:text-white content2 pb-[-12px]">
                         <h3 className="max-w-2xl mb-4 text-2xl font-normal tracking-wider  leading-none dark:text-white">
                             Reflections
                         </h3>
@@ -31,7 +31,7 @@ const Footer = (props: Props) => {
                             Reflections
                         </h3>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 sm:gap-6 sm:grid-cols-2">
+                    <div className="flex flex-row justify-end gap-4 items-center">
                         <div>
                             <h2 className="mb-2 text-sm font-semibold text-zinc-800 uppercase dark:text-white">
                                 <Link href="/about">About us</Link>

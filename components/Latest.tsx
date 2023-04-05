@@ -36,7 +36,8 @@ const Latest = (props: Props) => {
                 </div>
                 <div className="grid gap-8 lg:grid-cols-2">
                     {latestBlogs &&
-                        latestBlogs.map((blog, id) => {
+                        Array.isArray(latestBlogs) &&
+                        latestBlogs?.map((blog, id) => {
                             return <Cardss key={id} blog={blog} />;
                         })}
                 </div>

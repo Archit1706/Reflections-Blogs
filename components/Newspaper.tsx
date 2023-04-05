@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -9,7 +10,8 @@ type Props = {};
 const Newspaper = (props: Props) => {
     const forms = useRef();
     const to_name = "User";
-    const [user_email, setEmail] = useState("");
+    const [email, setEmail] = useState("");
+    // const email = "architrathod77@gmail.com";
     const from_name = "Reflections";
     const message =
         "Dear User, \nThank you for subscribing to our newsletter! We're thrilled to have you as part of our community and look forward to sharing our latest updates and insights with you. \nAs a subscriber, you can expect to receive regular updates on our products, services, and industry news. We'll also share helpful tips and resources to help you make the most of your experience with us.\n If you have any questions or feedback, please don't hesitate to reach out to our team. We're always here to help and value your input. \n Thank you again for subscribing, and we hope you enjoy our newsletter! \nBest regards, \n Reflections Blogs";
@@ -52,7 +54,7 @@ const Newspaper = (props: Props) => {
                             announcements and exclusive blogs feel free to sign
                             up with your email.
                         </p>
-                        <form ref={forms} onSubmit={sendEmail}>
+                        {/* <form ref={forms} onSubmit={sendEmail}>
                             <input
                                 type="hidden"
                                 name="to_name"
@@ -93,11 +95,11 @@ const Newspaper = (props: Props) => {
                                         placeholder="Enter your email"
                                         type="email"
                                         id="email"
-                                        name="user_email"
-                                        value={user_email}
-                                        onChange={(e: any) => {
-                                            setEmail(e.target.value);
-                                        }}
+                                        name="email"
+                                        value={email}
+                                        // onChange={(e: any) => {
+                                        //     setEmail(e.target.value);
+                                        // }}
                                         required
                                     />
                                 </div>
@@ -119,17 +121,47 @@ const Newspaper = (props: Props) => {
                                 </Link>
                                 .
                             </div>
-                        </form>
-
-                        {/* <form ref={forms} onSubmit={sendEmail}>
-                            <label>Name</label>
-                            <input type="text" name="user_name" />
-                            <label>Email</label>
-                            <input type="email" name="user_email" />
-                            <label>Message</label>
-                            <textarea name="message" />
-                            <input type="submit" value="Send" />
                         </form> */}
+
+                        <form ref={forms} onSubmit={sendEmail}>
+                            <label className="hidden">Name</label>
+                            <input
+                                type="text"
+                                className="hidden"
+                                value="User"
+                                name="user_name"
+                            />
+                            <label className="hidden">Message</label>
+                            <textarea
+                                className="hidden"
+                                value={message}
+                                name="message"
+                            />
+                            <label
+                                htmlFor="email"
+                                className="hidden mb-2 text-sm font-medium text-zinc-800 dark:text-zinc-300"
+                            >
+                                Email
+                            </label>
+
+                            <div className="flex justify-center items-center flex-row gap-0">
+                                <input
+                                    className="block p-3 pl-10 w-full text-sm text-zinc-800 bg-zinc-50 rounded-none sm:rounded-l-lg border border-zinc-300 sm:rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                    placeholder="Enter your email"
+                                    type="email"
+                                    name="email"
+                                    value={email}
+                                    onChange={(e: any) => {
+                                        setEmail(e.target.value);
+                                    }}
+                                />
+                                <input
+                                    className="py-3 px-5 text-sm font-medium text-center text-white sm:rounded-r-lg border cursor-pointer bg-primary-700 border-primary-600 rounded-none hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                    type="submit"
+                                    value="Subscribe"
+                                />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
