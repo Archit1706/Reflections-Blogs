@@ -3,6 +3,8 @@ import UserCard from "components/UserCard";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { BsRobot } from "react-icons/bs";
+
 export default function DashboardLayout({
     children, // will be a page or nested layout
 }: {
@@ -51,6 +53,14 @@ export default function DashboardLayout({
         "text-blue-600 border-b-2 border-blue-600 dark:text-blue-500 dark:border-blue-500";
     return (
         <>
+            <Link href="/chat">
+                <button
+                    className="fixed bottom-20 right-6 z-50 border-none outline-none bg-blue-500 text-white cursor-pointer text-2xl p-4 rounded animate-bounce hover:scale-105 hover:bg-sky-600"
+                    title="Chat with our bot!"
+                >
+                    <BsRobot />
+                </button>
+            </Link>
             <div className="max-w-[1420px] mx-auto flex flex-col justify-center items-center p-4">
                 <UserCard
                     userImage={userImage}

@@ -1,6 +1,6 @@
 .react-chatbot-kit-chat-container {
     /*   position: relative; */
-    z-index: 100;
+    z-index: 30;
     width: 100%;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .react-chatbot-kit-chat-btn-send {
-    background-color: rgb(249 115 22);
+    background-color: #3498db;
     width: 100px;
     border: none;
     color: #fff;

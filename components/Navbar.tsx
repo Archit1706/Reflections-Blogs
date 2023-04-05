@@ -80,7 +80,7 @@ const Navbar = ({ session }: Props) => {
     //   }
     // };
     return (
-        <div className="max-w-[1420px] mx-auto flex justify-center items-center sticky top-0 z-20">
+        <div className="max-w-[1420px] mx-auto flex justify-center items-center sticky top-0 z-50">
             <Nav
                 // fluid={true}
                 rounded={true}

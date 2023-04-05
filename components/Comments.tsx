@@ -41,7 +41,7 @@ const Comments = (props: Props) => {
 
     useEffect(() => {
         const newPositiveCount = comments?.reduce((count, comment) => {
-            if (comment.sentiment === "positive") {
+            if (comment?.sentiment === "positive") {
                 return count + 1;
             } else {
                 return count;
@@ -167,7 +167,7 @@ const Comments = (props: Props) => {
                         </time>
                       </p> */}
                                         </div>
-                                        {comment.sentiment == "positive" ? (
+                                        {comment?.sentiment == "positive" ? (
                                             <button
                                                 title="Good Comment"
                                                 id="dropdownComment4Button"
@@ -214,7 +214,7 @@ const Comments = (props: Props) => {
                                         )}
                                     </footer>
                                     <p className="text-gray-500 dark:text-gray-400">
-                                        {comment.text}
+                                        {comment?.text}
                                     </p>
                                 </article>
                             );

@@ -1,10 +1,10 @@
 import { createChatBotMessage } from "react-chatbot-kit";
-import { AiFillRobot } from 'react-icons/ai';
+import { BsRobot } from 'react-icons/bs';
 
 const config = {
-    initialMessages: [createChatBotMessage(`Hello, I am HealthBot! I can give you health advice based on your symptoms. What symptoms are you experiencing?`)],
-    botName: "HealthBot",
-    botAvatar: <AiFillRobot />,
+    initialMessages: [createChatBotMessage(`Welcome to Idea Bot! I'm here to help you generate creative and compelling ideas for your blog posts. Let's get started!`)],
+    botName: "IdeaBot",
+    botAvatar: <BsRobot />,
 
 }
 

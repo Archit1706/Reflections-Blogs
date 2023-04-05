@@ -20,8 +20,8 @@ const Newspaper = (props: Props) => {
         e.preventDefault();
         // toast("Sending Email...");
 
-        const templateId = "template_v6r31lq";
-        const serviceId = "service_lnoxb6a";
+        const templateId: any = process.env.EMAIL_TEMPLATE_ID;
+        const serviceId: any = process.env.EMAIL_SERVICE_ID;
 
         console.log(templateId, serviceId, email, forms.current);
 

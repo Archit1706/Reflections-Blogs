@@ -15,35 +15,17 @@ class ActionProvider {
     }
 
     ResponseHandler = (message) => {
-        let prompt = `You are a health bot that gives users health advice based on their symptoms.
-    My weight is ${localStorage.getItem(
-        "weight"
-    )}kg and my height is ${localStorage.getItem(
-            "height"
-        )}cm. Today, my total calories intake is ${localStorage.getItem(
-            "calories"
-        )} calories, my protein intake is ${localStorage.getItem(
-            "protein"
-        )} grams and my fats intake ${localStorage.getItem(
-            "fats"
-        )} grams. I burned ${localStorage.getItem(
-            "cal24h"
-        )} in the past 24hours.
-${
-    localStorage.getItem("condition") == ""
-        ? "I have " + localStorage.getItem("condition")
-        : ""
-}
-
-My symptoms are ${message}. Suggest possible aliments and cures based on my symptoms. If you think these symptoms are serious, ask me to visit a doctor.`;
+        let prompt = `You are an IdeaBot for the Reflections Blogging Website that helps users generate creative and compelling ideas for their blog posts. The ideas I have are ${message}. Suugest some possible ideas related to it or brainstorm a new idea.`;
         console.log(prompt);
+
+        const apiKey = process.env.OPENAI_API_KEY;
         fetch(
             "https://api.openai.com/v1/engines/text-davinci-003/completions",
             {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${process.env.OPENAI_API_KEY}}`,
+                    Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
                 },
                 body: JSON.stringify({
                     prompt: prompt,
