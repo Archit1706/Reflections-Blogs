@@ -4,6 +4,8 @@ import Mountain from "../assets/mountain.jpg";
 import Forest from "../assets/forest.jpg";
 import River from "../assets/river.jpg";
 import Cards from "./Cards/Cards";
+
+import { motion } from "framer-motion";
 type Props = {
     bid?: string;
 };
@@ -15,6 +17,26 @@ type Blog = {
     autherImg: string;
     autherName: string;
     dateOfPost: string;
+};
+
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.5,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
 };
 const Recommended = (props: Props) => {
     const router = useRouter();
@@ -46,14 +68,18 @@ const Recommended = (props: Props) => {
                     Recommended Just For You!
                 </h1>
 
-                <div className="p-4 mt-4 gap-y-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-8 md:gap-y-12">
+                <motion.div
+                    variants={container}
+                    className="p-4 mt-4 gap-y-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 md:gap-x-8 md:gap-y-12"
+                >
                     {/* <!--Card 1--> */}
 
                     {recs?.length > 0 &&
                         Array.isArray(recs) &&
                         recs?.map((rec: any) => {
                             return (
-                                <div
+                                <motion.div
+                                    variants={item}
                                     className="rounded-md shadow-md hover:scale-105 ease-in duration-300 cursor-pointer dark:shadow-sm dark:shadow-blue-200"
                                     key={rec.id}
                                 >
@@ -84,10 +110,10 @@ const Recommended = (props: Props) => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </motion.div>
                             );
                         })}
-                </div>
+                </motion.div>
             </div>
         )
     );

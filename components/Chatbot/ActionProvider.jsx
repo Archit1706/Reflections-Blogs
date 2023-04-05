@@ -43,7 +43,7 @@ My symptoms are ${message}. Suggest possible aliments and cures based on my symp
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer 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`,
+                    Authorization: `Bearer ${process.env.OPENAI_API_KEY}}`,
                 },
                 body: JSON.stringify({
                     prompt: prompt,
