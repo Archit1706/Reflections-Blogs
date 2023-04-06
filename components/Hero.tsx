@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 // import Typewriter from "typewriter-effect";
-
+import Image from "next/image";
 import hero from "assets/hero.jpg";
 
 type Props = {};
@@ -59,13 +59,19 @@ const Hero = (props: Props) => {
 
                     <div className="self-center lg:mt-0 lg:col-span-5 lg:flex">
                         {/* <img
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-              alt="mockup"
-            /> */}
-                        <img
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+                            alt="mockup"
+                        /> */}
+                        <Image
                             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mobile-app.svg"
                             alt="mockup"
+                            height={400}
+                            width={400}
                         />
+                        {/* <img
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mobile-app.svg"
+                            alt="mockup"
+                        /> */}
                     </div>
                 </div>
             </section>

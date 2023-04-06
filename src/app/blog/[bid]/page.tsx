@@ -10,6 +10,7 @@ import parse from "html-react-parser";
 import Link from "next/link";
 import Comments from "components/Comments";
 import { BsBookmarkCheckFill, BsBookmarkDash } from "react-icons/bs";
+import { motion } from "framer-motion";
 type Props = {};
 
 const blogDetail = {
@@ -20,6 +21,26 @@ const blogDetail = {
     timestamp: "2020-06-25 14:39:13.134000+00:00",
     tags: "Culture Society Book Review Trends Algorithms",
     image: "https://miro.medium.com/max/1400/0*UPrR_YckGORrt5LF",
+};
+
+const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delayChildren: 0.5,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
 };
 
 const BlogDetail = ({ params }: any) => {
@@ -289,23 +310,30 @@ const BlogDetail = ({ params }: any) => {
                             <div className="text-2xl font-bold dark:text-white">
                                 You May Also Like
                             </div>
-                            <div className="w-full grid grid-cols-1 md:grid-cols-2 mt-4 gap-6 justify-between">
+                            <motion.div
+                                variants={container}
+                                className="w-full grid grid-cols-1 md:grid-cols-2 mt-4 gap-6 justify-between"
+                            >
                                 {recs &&
                                     recs.length > 0 &&
                                     recs.map((rec) => (
-                                        <div className="" key={rec.id}>
+                                        <motion.div
+                                            variants={item}
+                                            className="shadow-md dark:shadow-sm dark:shadow-blue-200 rounded-md hover:scale-105 ease-in duration-300 cursor-pointer"
+                                            key={rec.id}
+                                        >
                                             <div
                                                 onClick={() =>
                                                     onRecClick(rec.id)
                                                 }
-                                                className="flex flex-col w-full hover:scale-110 ease-in duration-300 cursor-pointer"
+                                                className="flex flex-col w-full"
                                             >
                                                 <img
                                                     src={`https://source.unsplash.com/random/?${rec?.tags.join(
                                                         ","
                                                     )}`}
-                                                    alt=""
-                                                    className="aspect-video object-cover"
+                                                    alt="Image"
+                                                    className="aspect-video object-cover rounded-md"
                                                 />
                                                 <div className="flex mt-3">
                                                     {rec.tags.length > 0 && (
@@ -321,9 +349,9 @@ const BlogDetail = ({ params }: any) => {
                                                     {rec.title}
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     ))}
-                            </div>
+                            </motion.div>
                         </div>
                     )}
                 </div>
