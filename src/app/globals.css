@@ -29,6 +29,10 @@ html {
     /* scrollbar-width: none; */
 }
 
+body {
+    min-height: 100vh;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -184,4 +188,9 @@ html {
 #progressBarContainer,
 #progressBar {
     height: 5px;
+}
+
+.footer {
+    position: sticky;
+    top: 100%;
 }

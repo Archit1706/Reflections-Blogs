@@ -40,7 +40,9 @@ export default async function RootLayout({ children }: Props) {
                     <div>{children}</div>
                 </PageWrapper>
             </body>
-            <Footer />
+            <div className="footer">
+                <Footer />
+            </div>
         </html>
     );
 }

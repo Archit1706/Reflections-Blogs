@@ -77,25 +77,25 @@ const Comments = (props: Props) => {
         ],
     };
     return (
-        <div className="max-w-[1420px] mx-0 flex flex-col justify-center items-center p-4 dark:bg-gray-900 mt-12">
-            <section className="w-full bg-white dark:bg-gray-900 py-8 lg:py-16">
+        <div className="max-w-[1420px] mx-0 flex flex-col justify-center items-center p-4 dark:bg-zinc-900 mt-12">
+            <section className="w-full bg-white dark:bg-zinc-900 py-8 lg:py-16">
                 <div className="flex flex-col justify-center items-center gap-4">
                     <h2 className="font-bold text-lg text-zinc-600 dark:text-zinc-300 tracking-wide">
                         Sentiment Analysis on Comments
                     </h2>
-                    <div className="h-96 w-96">
+                    <div className="h-80 w-80 md:h-96 md:w-96">
                         <DoughnutChart data={commentData} />
                     </div>
                 </div>
                 <div className="max-w-2xl mx-auto px-4">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">
+                        <h2 className="text-lg lg:text-2xl font-bold text-zinc-900 dark:text-white">
                             Discussion ({comments?.length})
                         </h2>
                     </div>
                     {isLoggedIn ? (
                         <div className="">
-                            <div className="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+                            <div className="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-zinc-200 dark:bg-zinc-800 dark:border-zinc-700">
                                 <label htmlFor="comment" className="sr-only">
                                     Your comment
                                 </label>
@@ -104,7 +104,7 @@ const Comments = (props: Props) => {
                                     rows={6}
                                     onChange={(e) => setComment(e.target.value)}
                                     value={comment}
-                                    className="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800"
+                                    className="px-0 w-full text-sm text-zinc-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-zinc-400 dark:bg-zinc-800"
                                     placeholder="Write a comment..."
                                     required
                                 ></textarea>
@@ -139,11 +139,11 @@ const Comments = (props: Props) => {
                             return (
                                 <article
                                     key={id}
-                                    className="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+                                    className="p-6 text-base bg-white border-t border-zinc-200 dark:border-zinc-700 dark:bg-zinc-900"
                                 >
                                     <footer className="flex justify-between items-center mb-2">
                                         <div className="flex items-center">
-                                            <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                                            <p className="inline-flex items-center mr-3 text-sm text-zinc-900 dark:text-white">
                                                 <img
                                                     className="mr-2 w-6 h-6 rounded-full"
                                                     src={
@@ -153,11 +153,11 @@ const Comments = (props: Props) => {
                                                     alt=""
                                                 />
                                             </p>
-                                            <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            <p className="text-sm text-zinc-600 dark:text-zinc-400">
                                                 {comment?.author ||
                                                     "Anonymous User"}
                                             </p>
-                                            {/* <p className="text-sm text-gray-600 dark:text-gray-400">
+                                            {/* <p className="text-sm text-zinc-600 dark:text-zinc-400">
                         <time
                           pubdate
                           datetime="2022-06-23"
@@ -172,7 +172,7 @@ const Comments = (props: Props) => {
                                                 title="Good Comment"
                                                 id="dropdownComment4Button"
                                                 data-dropdown-toggle="dropdownComment4"
-                                                className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                className="inline-flex items-center p-2 text-sm font-medium text-center text-zinc-400 bg-white rounded-lg hover:bg-zinc-100 focus:ring-4 focus:outline-none focus:ring-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-700 dark:focus:ring-zinc-600"
                                                 type="button"
                                             >
                                                 <svg
@@ -194,7 +194,7 @@ const Comments = (props: Props) => {
                                                 title="Bad Comment"
                                                 id="dropdownComment4Button"
                                                 data-dropdown-toggle="dropdownComment4"
-                                                className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                className="inline-flex items-center p-2 text-sm font-medium text-center text-zinc-400 bg-white rounded-lg hover:bg-zinc-100 focus:ring-4 focus:outline-none focus:ring-zinc-50 dark:bg-zinc-900 dark:hover:bg-zinc-700 dark:focus:ring-zinc-600"
                                                 type="button"
                                             >
                                                 <svg
@@ -213,7 +213,7 @@ const Comments = (props: Props) => {
                                             </button>
                                         )}
                                     </footer>
-                                    <p className="text-gray-500 dark:text-gray-400">
+                                    <p className="text-zinc-500 dark:text-zinc-400">
                                         {comment?.text}
                                     </p>
                                 </article>

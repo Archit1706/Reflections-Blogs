@@ -49,7 +49,7 @@ const SpeechToText = ({ message, setMessage }: Props) => {
             <div className="">
                 <label
                     htmlFor="message"
-                    className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-md font-medium text-zinc-900 dark:text-white"
                 >
                     Your Story
                 </label>
@@ -59,7 +59,7 @@ const SpeechToText = ({ message, setMessage }: Props) => {
                     rows={10}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="block p-2.5 w-full text-md text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="block p-2.5 w-full text-md text-zinc-900 bg-zinc-50 rounded-lg border border-zinc-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Write your thoughts here..."
                 ></textarea>
             </div>

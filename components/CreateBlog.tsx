@@ -137,7 +137,7 @@ const CreateBlogs = (props: Props) => {
         },
     };
 
-    const item = {
+    const items = {
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
@@ -233,10 +233,10 @@ const CreateBlogs = (props: Props) => {
     if (!props.session) {
         return (
             <div className="max-w-[1420px] mx-auto flex flex-col justify-center items-center p-4 mt-32">
-                <section className="bg-white dark:bg-gray-900">
+                <section className="bg-white dark:bg-zinc-900">
                     <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                         <div className="mx-auto max-w-screen-md sm:text-center">
-                            <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white">
+                            <h2 className="mb-4 text-3xl tracking-tight font-extrabold text-zinc-900 sm:text-4xl dark:text-white">
                                 Log In to create a blog...
                             </h2>
                             <button
@@ -253,10 +253,10 @@ const CreateBlogs = (props: Props) => {
     }
 
     return (
-        <div className="md:w-[90%] max-w-[1420px] mx-auto border-none focus:ring-0 bg-slate-50 mt-20 p-4 md:p-10 border-1 rounded dark:bg-gray-800 dark:text-white ">
+        <div className="md:w-[90%] max-w-[1420px] mx-auto border-none focus:ring-0 bg-slate-50 mt-20 p-4 md:p-10 border-1 rounded dark:bg-zinc-800 dark:text-white ">
             <input
                 type="text"
-                className="text-lg md:text-4xl border-hidden w-full antialiased italicborder-hidden overflow-scroll p-2.5 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="text-lg md:text-4xl border-hidden w-full antialiased italicborder-hidden overflow-scroll p-2.5 text-zinc-900 bg-zinc-50 rounded-lg border border-zinc-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-zinc-700 dark:border-zinc-600 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Type your title here..."
                 onChange={(e) => setTitle(e.target.value)}
             />
@@ -273,8 +273,8 @@ const CreateBlogs = (props: Props) => {
                             <motion.span
                                 key={id}
                                 onClick={() => onNextClick(item)}
-                                className="px-4 py-2 rounded-full border-2 p-2.5 text-md text-gray-900 bg-gray-50 ring-blue-500 border-blue-500 dark:bg-gray-700 dark:text-white dark:ring-blue-500 dark:border-blue-500 font-semibold text-sm flex align-center cursor-pointer active:bg-gray-300 transition duration-300 ease"
-                                variants={item}
+                                className="px-4 py-2 rounded-full border-2 p-2.5 text-md text-zinc-900 bg-zinc-50 ring-blue-500 border-blue-500 dark:bg-zinc-700 dark:text-white dark:ring-blue-500 dark:border-blue-500 font-semibold text-sm flex align-center cursor-pointer active:bg-zinc-300 transition duration-300 ease"
+                                variants={items}
                             >
                                 {item}
                             </motion.span>
@@ -285,7 +285,7 @@ const CreateBlogs = (props: Props) => {
             <SpeechToText setMessage={setMessage} message={message} />
 
             <Multiselect
-                className="mt-10 dark:bg-gray-800 dark:text-black ring-blue-500 border-blue-500"
+                className="mt-10 dark:bg-zinc-800 dark:text-black ring-blue-500 border-blue-500"
                 isObject={false}
                 onKeyPressFn={function noRefCheck() {}}
                 onRemove={(selectedList, selectedItem) => {
