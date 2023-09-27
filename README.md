@@ -23,3 +23,49 @@ Once your article is complete, our platform will automatically generate a summar
 Reflections is more than just a blogging platform - it's a community of writers and readers who share a passion for storytelling. Whether you're looking to connect with like-minded individuals or simply share your experiences with the world, Reflections offers the tools and support you need to succeed.
 
 So what are you waiting for? Sign up for Reflections today and discover the power of storytelling!
+
+## Demo
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/f0709284-6623-41fb-9e74-2e131b2fccfd)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/4b3bea51-872c-4747-b815-c2cb83502962)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/85c635b5-1651-4a65-bb99-14090b673a38)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/81e17d28-6e44-4fc8-81eb-74a9794afe07)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/76a135ed-4453-4ea7-b364-d54d6e1c0663)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/b198f937-ac40-4458-8495-2b8f176a8fa5)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/91991041-0977-4670-b9e4-335a605ccffc)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/479504b7-1e42-49bf-bebd-09ddc0f52a41)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/b4cf8c84-70ee-4502-80b1-4c39151054b4)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/66232a6a-ebdd-4e2f-a1f4-e06e653be80b)
+
+---
+
+![image](https://github.com/Archit1706/Reflections-Blogs/assets/75872913/2f85bcee-2abc-46ae-a5da-e26d185a6e96)
+
+---
