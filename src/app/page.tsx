@@ -30,7 +30,7 @@ const Home = (props: Props) => {
 
     const [bid, setBid] = useState("");
     useEffect(() => {
-        setBid(localStorage.getItem("bid"));
+        setBid(localStorage.getItem("bid") || "63c8518f31ad3b98d781c724");
         clickHandler();
     }, []);
 
